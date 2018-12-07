@@ -4,16 +4,16 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Love</title>
         
-        <link type="text/css" rel="stylesheet" href="./Love_files/default.css">
-        <script type="text/javascript" src="./Love_files/jquery.min.js"></script>
-        <script type="text/javascript" src="./Love_files/jscex.min.js"></script>
-        <script type="text/javascript" src="./Love_files/jscex-parser.js"></script>
-        <script type="text/javascript" src="./Love_files/jscex-jit.js"></script>
-        <script type="text/javascript" src="./Love_files/jscex-builderbase.min.js"></script>
-        <script type="text/javascript" src="./Love_files/jscex-async.min.js"></script>
-        <script type="text/javascript" src="./Love_files/jscex-async-powerpack.min.js"></script>
-        <script type="text/javascript" src="./Love_files/functions.js" charset="utf-8"></script>
-        <script type="text/javascript" src="./Love_files/love.js" charset="utf-8"></script>
+        <link type="text/css" rel="stylesheet" href="{{url_for('static',filename='type4/./Love_files/default.css')}}">
+        <script type="text/javascript" src="{{url_for('static',filename='type4/Love_files/jquery.min.js')}}"></script>
+        <script type="text/javascript" src="{{url_for('static',filename='type4/Love_files/jscex.min.js')}}"></script>
+        <script type="text/javascript" src="{{url_for('static',filename='type4/Love_files/jscex-parser.js')}}"></script>
+        <script type="text/javascript" src="{{url_for('static',filename='type4/Love_files/jscex-jit.js')}}"></script>
+        <script type="text/javascript" src="{{url_for('static',filename='type4/Love_files/jscex-builderbase.min.js')}}"></script>
+        <script type="text/javascript" src="{{url_for('static',filename='type4/Love_files/jscex-async.min.js')}}"></script>
+        <script type="text/javascript" src="{{url_for('static',filename='type4/Love_files/jscex-async-powerpack.min.js')}}"></script>
+        <script type="text/javascript" src="{{url_for('static',filename='type4/Love_files/functions.js')}}" charset="utf-8"></script>
+        <script type="text/javascript" src="{{url_for('static',filename='type4/Love_files/love.js')}}" charset="utf-8"></script>
 
     </head>
     <body>
@@ -23,27 +23,18 @@
                <div id="text">
                 <div id="code"> 
 		          <div id="codeleft">
-                    <span class="say">我如果爱你——<br/> 绝不像攀援的凌霄花，<br/> 借你的高枝炫耀自己；<br/> 我如果爱你——<br/> 绝不学痴情的鸟儿，<br/>   为绿荫重复单调的歌曲；</span>
-                   <br>
-                    <span class="say"><br/> 也不止像泉源，<br/> 常年送来清凉的慰藉；<br/> 也不止像险峰，<br/> 增加你的高度，衬托你的威仪。<br/> 甚至日光，<br/> 甚至春雨。</span><br>
-                        <br>
-                    <span class="say">不，这些都还不够！<br/>我必须是你近旁的一株木棉，<br/>作为树的形象和你站在一起。<br/>根，紧握在地下；<br/>叶，相触在云里。<br/>每一阵风过，<br/>我们都互相致意，</span><br></div>
-                    <div id="coderight">
-                     <span class="say">但没有人，<br/>听懂我们的言语。<br/>你有你的铜枝铁干，<br/>像刀，像剑，也像戟；</span>
-                    <span class="say"><br/>我有我红硕的花朵，<br/>像沉重的叹息，<br/>又像英勇的火炬。   </span><br><br>
-                    <span class="say">我们分担寒潮、风雷、霹雳；<br/>我们共享雾霭、流岚、虹霓。<br/>仿佛永远分离，</span>
-                    <span class="say"><br/>却又终身相依。<br/>这才是伟大的爱情，<br/>坚贞就在这里：</span>
-                    <span class="say"><br/>爱——<br/>不仅爱你伟岸的身躯，<br/>也爱你坚持的位置，<br/>足下的土地。</span><br>
-
-                   <br>
-                    <span class="say"><span class="space"></span> --致橡树</span>
-                    <span class="say"><br/>大青椒爱你呦！</span>
+                    {% for para in wordlistl %}<span class="say">{% for item in para %}{{item}}<br/>{% endfor %}</span><br>
+                	{% endfor %} 
+                 </div>
+                  <div id="coderight">
+                    {% for para in wordlistr %}<span class="say">{% for item in para %}{{item}}<br/>{% endfor %}</span><br>
+                	{% endfor %}
                     </div>
-					</div>
+				</div>
                 </div>
                 <div id="clock-box">
-                    <a href="https://user.qzone.qq.com/896378080" target="_blank">@章杭奎</a> 与 <a href="https://user.qzone.qq.com/1127396695" target="_blank">@大青椒</a> (认识或在一起）的
-                        <div id="clock"></div>
+                    <a href="{{href1}}" target="_blank">@{{name1}}</a> 与 <a href="{{href2}}" target="_blank">@{{name2}}</a> 在一起的
+                    <div id="clock"></div>
                 </div>
                 <canvas id="canvas" width="1100" height="680"></canvas>
             </div>
