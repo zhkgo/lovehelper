@@ -34,4 +34,5 @@ def type2():
 	name3="小草莓" #全称
 	name4="工科男" #身份
 	return render_template("type2.htm",name1=name1,name2=name2,name3=name3,name4=name4)
+
 app.run(port=10086)
