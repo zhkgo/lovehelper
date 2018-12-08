@@ -131,6 +131,10 @@ def type4():
 	href2='https://user.qzone.qq.com/1127396695'
 	name1='大青椒'
 	name2='小草莓'
-	return render_template("type4.html",wordlistl=wordlistl,wordlistr=wordlistr,name1=name1,name2=name2,href1=href1,href2=href2)
-
+	date="2017,6,25"#日期
+	hours="18"#具体时间
+	return render_template("type4.html",date=date,hours=hours,wordlistl=wordlistl,wordlistr=wordlistr,name1=name1,name2=name2,href1=href1,href2=href2)
+@app.route('/type7/')
+def type7():
+	return render_template("type7.html")
 app.run(port=10086)
