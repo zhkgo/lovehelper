@@ -1,2 +1,0 @@
-makesnake.js message是跟随鼠标的文字
-time.js 修改时间
