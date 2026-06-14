@@ -137,4 +137,5 @@ def type4():
 @app.route('/type7/')
 def type7():
 	return render_template("type7.html")
-app.run(port=10086)
+app.run(host='0.0.0.0',port=1314)
+
